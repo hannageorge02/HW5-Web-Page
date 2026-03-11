@@ -1,0 +1,41 @@
+from IPython.display import HTML
+from google.colab import files
+
+# HTML content for a basic webpage
+html_content = """
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Basic Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            color: #0056b3;
+        }
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello!</h1>
+    <p>Welcome to my web page.</p>
+    <p>Hope you enjoy.</p>
+</body>
+</html>
+"""
+
+# Display the HTML in the notebook output
+display(HTML(html_content))
+
+# Save the HTML to a file
+with open('index.html', 'w') as f:
+    f.write(html_content)
+
+# Provide a download link for the file
+files.download('index.html')
